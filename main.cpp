@@ -92,6 +92,101 @@ good to go!
  */
 
 #include <iostream>
+
+struct FloatType
+{
+    //float lhs = 0;
+    //float rhs = 0;
+
+    float add(float lhs, float rhs)
+    {
+        return lhs+rhs;
+    }
+
+    float subtract(float lhs, float rhs)
+    {
+        return lhs-rhs;
+    }
+
+    float multiply(float lhs, float rhs)
+    {
+        return lhs*rhs; 
+    }
+    
+    float divide(float lhs, float rhs)
+    {
+        if(rhs == 0.0f)
+        {
+            std::cout << "warning: floating-point-division-by-zero " << std::endl;
+        }
+        return lhs/rhs; 
+    }
+};
+
+struct DoubleType
+{
+    //double lhs = 0;
+    //double rhs = 0;
+
+    double add(double lhs, double rhs)
+    {
+        return lhs+rhs;
+    }
+
+    double subtract(double lhs, double rhs)
+    {
+        return lhs-rhs;
+    }
+
+    double multiply(double lhs, double rhs)
+    {
+        return lhs*rhs; 
+    }
+    
+    double divide(double lhs, double rhs)
+    {
+        if(rhs == 0.0)
+        {
+            std::cout << "warning: floating-point-division-by-zero " << std::endl;
+        }
+        return lhs/rhs;        
+    }
+};
+
+struct IntType
+{
+    //int lhs = 0;
+    //int rhs = 0;
+
+    int add(int lhs, int rhs)
+    {
+        return lhs+rhs;
+    }
+
+    int subtract(int lhs, int rhs)
+    {
+        return lhs-rhs;
+    }
+
+    int multiply(int lhs, int rhs)
+    {
+        return lhs*rhs; 
+    }
+    
+    int divide(int lhs, int rhs)
+    {
+        if(rhs == 0)
+        {
+            std::cout << "warning: floating-point-division-by-zero " << std::endl;
+            return {};
+        }
+        else 
+        {
+            return lhs/rhs;
+        }     
+    }
+};
+
 int main() 
 {
     FloatType ft;
