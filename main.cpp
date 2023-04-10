@@ -95,9 +95,6 @@ good to go!
 
 struct FloatType
 {
-    //float lhs = 0;
-    //float rhs = 0;
-
     float add(float lhs, float rhs)
     {
         return lhs+rhs;
@@ -117,17 +114,15 @@ struct FloatType
     {
         if(rhs == 0.0f)
         {
-            std::cout << "warning: floating-point-division-by-zero " << std::endl;
+            std::cout << std::endl << "warning, floating point division by zero returns 'inf' !" << std::endl;
         }
-        return lhs/rhs; 
+        
+        return lhs/rhs;  
     }
 };
 
 struct DoubleType
 {
-    //double lhs = 0;
-    //double rhs = 0;
-
     double add(double lhs, double rhs)
     {
         return lhs+rhs;
@@ -147,17 +142,15 @@ struct DoubleType
     {
         if(rhs == 0.0)
         {
-            std::cout << "warning: floating-point-division-by-zero " << std::endl;
+            std::cout << std::endl << "warning, floating point division by zero returns 'inf' !" << std::endl;
         }
-        return lhs/rhs;        
+        
+        return lhs/rhs;  
     }
 };
 
 struct IntType
 {
-    //int lhs = 0;
-    //int rhs = 0;
-
     int add(int lhs, int rhs)
     {
         return lhs+rhs;
@@ -177,13 +170,12 @@ struct IntType
     {
         if(rhs == 0)
         {
-            std::cout << "warning: floating-point-division-by-zero " << std::endl;
-            return {};
+            std::cout << std::endl << "error, integer division by zero will crash the program!" << std::endl;
+            std::cout << "retruning lhs" << std::endl;
+            return lhs;
         }
-        else 
-        {
-            return lhs/rhs;
-        }     
+        
+    return lhs/rhs;   
     }
 };
 
